@@ -1,2 +1,25 @@
-# Auto detect text files and perform LF normalization
+# Auto-detect text files and perform LF normalization
 * text=auto
+
+# Track Unreal's core binary asset and map formats
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap filter=lfs diff=lfs merge=lfs -text
+
+# Track common game development binary formats inside the Content folder
+Content/**/*.fbx filter=lfs diff=lfs merge=lfs -text
+Content/**/*.png filter=lfs diff=lfs merge=lfs -text
+Content/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+Content/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+Content/**/*.tga filter=lfs diff=lfs merge=lfs -text
+Content/**/*.psd filter=lfs diff=lfs merge=lfs -text
+Content/**/*.wav filter=lfs diff=lfs merge=lfs -text
+Content/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+Content/**/*.exr filter=lfs diff=lfs merge=lfs -text
+Content/**/*.hdr filter=lfs diff=lfs merge=lfs -text
+Content/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+
+# Track common external 3D source assets if saved inside Content
+Content/**/*.blend filter=lfs diff=lfs merge=lfs -text
+Content/**/*.obj filter=lfs diff=lfs merge=lfs -text
+Content/**/*.max filter=lfs diff=lfs merge=lfs -text
+Content/**/*.maya filter=lfs diff=lfs merge=lfs -text
